@@ -5,7 +5,6 @@ services:
     plan: free
     buildCommand: dotnet publish -c Release -o out
     startCommand: ./out/KnowledgePointsApp
-    buildFilterPath: backend/KnowledgePointsApp
     repo: https://github.com/DSY4444/gk-notes-app.git
     branch: main
     autoDeploy: true
