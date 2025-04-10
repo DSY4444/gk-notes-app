@@ -1,7 +1,7 @@
 services:
   - type: web
     name: gk-notes-backend
-    env: dotnet
+    runtime: dotnet
     plan: free
     buildCommand: dotnet publish -c Release -o out
     startCommand: ./out/KnowledgePointsApp
