@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: gk-notes-backend
+    env: dotnet
+    plan: free
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: ./out/KnowledgePointsApp
+    buildFilterPath: backend/KnowledgePointsApp
+    repo: https://github.com/DSY4444/gk-notes-app.git
+    branch: main
+    autoDeploy: true
+    rootDir: backend/KnowledgePointsApp
+    envVars:
+      - key: ConnectionStrings__DefaultConnection
+        fromDatabase:
+          name: gk-notes-db
+          property: connectionString
+
+databases:
+  - name: gk-notes-db
+    postgresMajorVersion: 15
+    plan: free
