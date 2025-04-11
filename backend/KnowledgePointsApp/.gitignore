@@ -1,0 +1,41 @@
+# Build artifacts
+bin/
+obj/
+out/
+*.user
+*.suo
+*.cache
+
+# Rider / VS Code / VS for Mac
+.idea/
+.vscode/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Env files
+.env
+*.env
+
+# Docker
+.dockerignore
+
+# HTTP test files
+*.http
+
+# User secrets
+secrets.json
+
+# EF Core migration snapshots (optional — keep if versioning migrations)
+Migrations/
+
+# Railway CLI & config files
+.railway/
+
+# Publish output
+publish/
